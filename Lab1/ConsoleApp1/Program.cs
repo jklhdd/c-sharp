@@ -6,23 +6,45 @@ namespace ConsoleApp1
 	{
 		static void Main(string[] args)
 		{
-			int n;
-			int f1 = 1, f2 = 2, fn = 0;
+			Fibo f = new Fibo();
 			Console.WriteLine("Nhap N:");
-			n = Convert.ToInt32(Console.ReadLine());
-			if (n == 2) Console.WriteLine("So fibo tim duoc : " + f2);
-			else if (n == 1) Console.WriteLine("So fibo tim duoc : " + f1);
-			else if (n < 1) Console.WriteLine("Khong tim duoc");
-			else
+			f.setN(Convert.ToInt32(Console.ReadLine()));
+			f.getFibo();
+			Console.WriteLine(f.getFibo());
+		}
+		class Fibo
+		{
+			int n;
+			int f1 = 1;
+			int f2 = 2;
+			int fn = 0;
+			public void setN(int n)
 			{
-				while (f1 + f2 <= n)
+				this.n = n;
+			}
+			public int getN()
+			{
+				return n;
+			}
+			public int getFibo()
+			{
+				if (this.getN() == 2) return fn = 2;
+				else if (this.getN() == 1) return fn = 1;
+				else if (this.getN() < 1)
 				{
-					fn = f1 + f2;
-					f1 = f2;
-					f2 = fn;
+					Console.WriteLine("Khong tim duoc"); return fn = 0;
 				}
-				Console.WriteLine("So fibo tim duoc : " + fn);
+				else
+				{
+					while (f1 + f2 < n)
+					{
+						fn = f1 + f2;
+						f1 = f2;
+						f2 = fn;
+					}
+					return fn;
 
+				}
 			}
 		}
 	}
