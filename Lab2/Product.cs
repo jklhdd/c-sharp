@@ -53,7 +53,7 @@ namespace Lab2
             this.qty = Int32.Parse(Console.ReadLine());
             Console.WriteLine("Mô tả sản phẩm:");
             this.desc = Console.ReadLine();
-                    
+            addImg();        
 
         }
 
@@ -86,6 +86,10 @@ namespace Lab2
             Console.WriteLine("Chọn ảnh xóa:");
             int index = Int32.Parse(Console.ReadLine());
             this.gall.RemoveAt(index);            
+        }
+
+        public bool checkQty(){
+            return (this.qty>0) ? true : false;
         }
 
     }
