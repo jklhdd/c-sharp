@@ -1,0 +1,11 @@
+c:\Users\Long\Documents\GitHub\c-sharp\Lab2\bin\Debug\netcoreapp3.1\Lab2.exe
+C:\Users\Long\Documents\GitHub\c-sharp\Lab2\bin\Debug\netcoreapp3.1\Lab2.deps.json
+C:\Users\Long\Documents\GitHub\c-sharp\Lab2\bin\Debug\netcoreapp3.1\Lab2.runtimeconfig.json
+C:\Users\Long\Documents\GitHub\c-sharp\Lab2\bin\Debug\netcoreapp3.1\Lab2.runtimeconfig.dev.json
+c:\Users\Long\Documents\GitHub\c-sharp\Lab2\bin\Debug\netcoreapp3.1\Lab2.dll
+c:\Users\Long\Documents\GitHub\c-sharp\Lab2\bin\Debug\netcoreapp3.1\Lab2.pdb
+c:\Users\Long\Documents\GitHub\c-sharp\Lab2\obj\Debug\netcoreapp3.1\Lab2.csprojAssemblyReference.cache
+c:\Users\Long\Documents\GitHub\c-sharp\Lab2\obj\Debug\netcoreapp3.1\Lab2.AssemblyInfoInputs.cache
+c:\Users\Long\Documents\GitHub\c-sharp\Lab2\obj\Debug\netcoreapp3.1\Lab2.AssemblyInfo.cs
+c:\Users\Long\Documents\GitHub\c-sharp\Lab2\obj\Debug\netcoreapp3.1\Lab2.dll
+c:\Users\Long\Documents\GitHub\c-sharp\Lab2\obj\Debug\netcoreapp3.1\Lab2.pdb
