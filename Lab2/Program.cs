@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Lab2
 {
@@ -6,7 +7,9 @@ namespace Lab2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Product a = new Product();
+            a.setInfo();
+            a.getInfo();
         }
     }
 }

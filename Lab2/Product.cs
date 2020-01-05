@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Lab2
 {
@@ -10,7 +11,7 @@ namespace Lab2
         private double price;
         private int qty;
         private String desc;
-        private List<String> gall;
+        private List<String> gall = new List<string>();
 
         private static int sID = 100;
 
@@ -53,7 +54,7 @@ namespace Lab2
             this.qty = Int32.Parse(Console.ReadLine());
             Console.WriteLine("Mô tả sản phẩm:");
             this.desc = Console.ReadLine();
-            addImg();        
+            this.addImg();        
 
         }
 
@@ -61,19 +62,28 @@ namespace Lab2
             int i = 0;
             int index;
             String s;
-            while(true){              
-                if(i == 10) {
-                    Console.WriteLine("Thư viện đầy,chọn ảnh thay thế");  
+            while(true){
+                if (i == 3)
+                {
+                    Console.WriteLine("Thư viện đầy,chọn ảnh thay thế");
                     index = Int32.Parse(Console.ReadLine());
                     Console.WriteLine("Nhập ảnh mới:");
                     s = Console.ReadLine();
-                    this.gall.Insert(index,s);    
+                    this.gall.RemoveAt(index);
+                    this.gall.Insert(index, s);
+                    Console.WriteLine("Dừng nhập ảnh? (Y/N)");
+                    String yn = Console.ReadLine();
+                    if (yn == "Y" || yn == "y") break;
                 }
-                Console.WriteLine("Nhập ảnh mới:");   
-                this.gall.Add(Console.ReadLine());
-                Console.WriteLine("Dừng nhập ảnh? (Y/N)");
-                if(Console.ReadLine() == "Y") break;
-                i++;                              
+                else {
+                    Console.WriteLine("Nhập ảnh mới:");
+                    this.gall.Add(Console.ReadLine());
+                    Console.WriteLine("Dừng nhập ảnh? (Y/N)");
+                    String yn = Console.ReadLine();
+                    if (yn == "Y" || yn == "y") break;
+                    i++;
+                }
+                                                  
             }
         }
 
