@@ -15,30 +15,37 @@ namespace Lab2
 
         private static int sID = 100;
 
+        public string Name { get => name; set => name = value; }
+        public int Id { get => id; set => id = value; }
+        public double Price { get => price; set => price = value; }
+        public int Qty { get => qty; set => qty = value; }
+        public string Desc { get => desc; set => desc = value; }
+        public List<string> Gall { get => gall; set => gall = value; }
+
         public Product(string name, double price, int qty, string desc, List<string> gall)
         {
-            this.id = sID++;
-            this.name = name;
-            this.price = price;
-            this.qty = qty;
-            this.desc = desc;
-            this.gall = gall;
+            this.Id = sID++;
+            this.Name = name;
+            this.Price = price;
+            this.Qty = qty;
+            this.Desc = desc;
+            this.Gall = gall;
         }
 
         public Product()
         {
-            this.id = sID++;
+            this.Id = sID++;
         }
 
         public void getInfo(){
             Console.WriteLine("Thông tin sản phẩm:");
-            Console.WriteLine("ID sản phẩm:" + id);
-            Console.WriteLine("Tên sản phẩm:" + name);
-            Console.WriteLine("Giá sản phẩm:" + price);
-            Console.WriteLine("Số lượng sản phẩm:" + qty);
-            Console.WriteLine("Mô tả sản phẩm:" + desc);
+            Console.WriteLine("ID sản phẩm:" + Id);
+            Console.WriteLine("Tên sản phẩm:" + Name);
+            Console.WriteLine("Giá sản phẩm:" + Price);
+            Console.WriteLine("Số lượng sản phẩm:" + Qty);
+            Console.WriteLine("Mô tả sản phẩm:" + Desc);
             Console.WriteLine("Ảnh sản phẩm:");
-            foreach(String t in gall){
+            foreach(String t in Gall){
                 Console.WriteLine(t);
             }
 
@@ -47,13 +54,13 @@ namespace Lab2
         public void setInfo(){
             Console.WriteLine("Nhập thông tin sản phẩm:");    
             Console.WriteLine("Tên sản phẩm:");
-            this.name = Console.ReadLine();
+            this.Name = Console.ReadLine();
             Console.WriteLine("Giá sản phẩm:");
-            this.price = Int32.Parse(Console.ReadLine());
+            this.Price = Int32.Parse(Console.ReadLine());
             Console.WriteLine("Số lượng sản phẩm:");
-            this.qty = Int32.Parse(Console.ReadLine());
+            this.Qty = Int32.Parse(Console.ReadLine());
             Console.WriteLine("Mô tả sản phẩm:");
-            this.desc = Console.ReadLine();
+            this.Desc = Console.ReadLine();
             this.addImg();        
 
         }
@@ -69,15 +76,15 @@ namespace Lab2
                     index = Int32.Parse(Console.ReadLine());
                     Console.WriteLine("Nhập ảnh mới:");
                     s = Console.ReadLine();
-                    this.gall.RemoveAt(index);
-                    this.gall.Insert(index, s);
+                    this.Gall.RemoveAt(index-1);
+                    this.Gall.Insert(index, s);
                     Console.WriteLine("Dừng nhập ảnh? (Y/N)");
                     String yn = Console.ReadLine();
                     if (yn == "Y" || yn == "y") break;
                 }
                 else {
                     Console.WriteLine("Nhập ảnh mới:");
-                    this.gall.Add(Console.ReadLine());
+                    this.Gall.Add(Console.ReadLine());
                     Console.WriteLine("Dừng nhập ảnh? (Y/N)");
                     String yn = Console.ReadLine();
                     if (yn == "Y" || yn == "y") break;
@@ -89,17 +96,17 @@ namespace Lab2
 
         public void deleteImg(){
             int i = 0;
-            foreach (String img in this.gall)
+            foreach (String img in this.Gall)
             {
                 Console.WriteLine(i+":"+img);            
             }
             Console.WriteLine("Chọn ảnh xóa:");
             int index = Int32.Parse(Console.ReadLine());
-            this.gall.RemoveAt(index);            
+            this.Gall.RemoveAt(index-1);            
         }
 
         public bool checkQty(){
-            return (this.qty>0) ? true : false;
+            return (this.Qty>0) ? true : false;
         }
 
     }
