@@ -12,13 +12,30 @@ namespace Lab2
         private int qty;
         private String desc;
         private List<String> gall = new List<string>();
+        public event de1 ChangeQty;
 
         private static int sID = 100;
 
         public string Name { get => name; set => name = value; }
         public int Id { get => id; set => id = value; }
         public double Price { get => price; set => price = value; }
-        public int Qty { get => qty; set => qty = value; }
+        public int Qty 
+        { 
+            get => qty; 
+            set
+            {
+                if(value != qty && qty != 0)
+                {
+                    if(ChangeQty == null)
+                    {
+                        ChangeQty += Cart.Notification;
+                    }
+                    ChangeQty("So luong thay doi: " + Math.Abs(value-qty)); 
+                }
+                qty = value;
+            }
+        
+        }
         public string Desc { get => desc; set => desc = value; }
         public List<string> Gall { get => gall; set => gall = value; }
 
