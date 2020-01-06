@@ -10,6 +10,7 @@ namespace Lab2
             Product a = new Product();
             a.setInfo();
             a.getInfo();
+            Cart b = new Cart();
         }
     }
 }

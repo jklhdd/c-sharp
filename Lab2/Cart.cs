@@ -32,10 +32,12 @@ namespace Lab2
         {
             this.pList = new List<Product>();
             this.pList.Add(p);
+            this.grandTotal = this.calMoney();
         }
         public List<Product> delP(int i)
         {
             this.pList.RemoveAt(i-1);
+            this.grandTotal = this.calMoney();
             return this.pList;
         }
 
