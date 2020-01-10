@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace as3
+namespace as4
 {
     class Program
     {
@@ -39,7 +39,7 @@ namespace as3
                 if (Program.flag)
                 {
                     
-                    Console.WriteLine(i);
+                    Console.WriteLine(i*100 + "milis");
                     return;
                 }
                 Thread.Sleep(100);

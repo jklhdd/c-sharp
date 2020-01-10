@@ -1,0 +1,11 @@
+C:\Users\Long\Documents\GitHub\c-sharp\as3\as3\bin\Debug\netcoreapp3.1\as3.exe
+C:\Users\Long\Documents\GitHub\c-sharp\as3\as3\bin\Debug\netcoreapp3.1\as3.deps.json
+C:\Users\Long\Documents\GitHub\c-sharp\as3\as3\bin\Debug\netcoreapp3.1\as3.runtimeconfig.json
+C:\Users\Long\Documents\GitHub\c-sharp\as3\as3\bin\Debug\netcoreapp3.1\as3.runtimeconfig.dev.json
+C:\Users\Long\Documents\GitHub\c-sharp\as3\as3\bin\Debug\netcoreapp3.1\as3.dll
+C:\Users\Long\Documents\GitHub\c-sharp\as3\as3\bin\Debug\netcoreapp3.1\as3.pdb
+C:\Users\Long\Documents\GitHub\c-sharp\as3\as3\obj\Debug\netcoreapp3.1\as3.csprojAssemblyReference.cache
+C:\Users\Long\Documents\GitHub\c-sharp\as3\as3\obj\Debug\netcoreapp3.1\as3.AssemblyInfoInputs.cache
+C:\Users\Long\Documents\GitHub\c-sharp\as3\as3\obj\Debug\netcoreapp3.1\as3.AssemblyInfo.cs
+C:\Users\Long\Documents\GitHub\c-sharp\as3\as3\obj\Debug\netcoreapp3.1\as3.dll
+C:\Users\Long\Documents\GitHub\c-sharp\as3\as3\obj\Debug\netcoreapp3.1\as3.pdb
